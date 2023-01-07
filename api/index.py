@@ -6,7 +6,7 @@ from api.chatgpt import ChatGPT
 
 import os
 
-line_bot_api = LineBotApi(os.getenv("LINE_CHANNEL_ACCESS_TOKEN"))
+line_bot_api = LineBotApi(os.getenv("rQU74H3+Vf+luCCMopEJ/Fku7MbfwxzIGaquKFQ7kN69wjSeCCXU8w9eaPJ6WUaLz8VnMZPe64Z+nwVm+0rSbk9FrRKokmlgZZdwqsOfgwTvxWlU7bSXFSu6rgiaIjRC+KVbgfh1g6aSBAwoU/JDCgdB04t89/1O/w1cDnyilFU="))
 line_handler = WebhookHandler(os.getenv("LINE_CHANNEL_SECRET"))
 working_status = os.getenv("DEFALUT_TALKING", default = "true").lower() == "true"
 
@@ -44,7 +44,7 @@ def handle_message(event):
         working_status = True
         line_bot_api.reply_message(
             event.reply_token,
-            TextSendMessage(text="我是時下流行的AI智能，目前可以為您服務囉，歡迎來跟我互動~"))
+            TextSendMessage(text="我是悠遊卡AI客服，目前可以為您服務囉，歡迎來跟我互動~"))
         return
 
     if event.message.text == "安靜":
